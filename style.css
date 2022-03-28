@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h6 {
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: lighter;
+}
+
+fieldset{
+  padding: 30px 40px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 370px;
+  margin-top: 20px;
+}
+
+fieldset:first-child{
+  margin-top: 80px;
+}
+
+fieldset:invalid ~ fieldset{
+  display: none;
+}
+
+fieldset input{
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.514);
+}
+
+label {
+  display: block;
+  margin: 20px 0 5px 0;
+  font-size: 14px;
+}
+
+select {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.514);
+}
+
+select::selection{
+  color: #fff;
+  background-color: black;
+}
+
+legend {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.container-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  margin:  20px 0px;
+  padding: 0;
+}
+
+.container-checkbox .label-pro {
+  margin: 0 0 0 5px;
+}
+
+.container-checkbox .checkbox-pro {
+  margin: 0 5px 0 5px;
+  width: auto;
+}
+
+.container-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-card .container-card-date {
+  width: 55%;
+}
+
+.container-card .container-card-cvc {
+  width: 35%;
+}
+
+.container-card .container-card-cvc input {
+  height: 32px;
+}
+
+form:valid button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  width: 350px;
+  margin: 10px 0 50px 0;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+form:valid button:hover {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+form:invalid button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+label[for="form-password"]::before,
+label[for="form-telephone"]::before,
+label[for="form-name"]::before,
+label[for="form-surname"]::before,
+label[for="form-age"]::before,
+label[for="form-email"]::before,
+label[for="form-card-number"]::before,
+label[for="form-cvc"]::before,
+label[for="form-date"]::before,
+label[for="form-address"]::before,
+label[for="form-plan"]::before {
+  content: "* ";
+  color: red;
+} 

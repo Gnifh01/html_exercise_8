@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lezione HTML</title>
+  </head>
+
+  <body>
+    <form>
+      <!-- FRIST SECTION -->
+      <fieldset class="section-one">
+        <legend align="center">I Tuoi Dati</legend>
+        <label for="form-name">Nome</label>
+        <input
+          type="text"
+          name="name"
+          id="form-name"
+          placeholder="Mario"
+          pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+          autocomplete="off"
+          required
+        />
+        <label for="form-surname">Cognome</label>
+        <input
+          type="text"
+          name="surname"
+          id="form-surname"
+          placeholder="Rossi"
+          pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+          autocomplete="off"
+          required
+        />
+        <label for="form-age">Data di Nascita</label>
+        <input type="date" name="date" id="form-age" max="2004-12-31" />
+        <label for="form-email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="form-email"
+          placeholder="exemple@email.com"
+          autocomplete="off"
+          required
+        />
+        <label for="form-password">Password <br> (min. 8 caratteri e 1 lettera in caps)</label>
+        <input
+          title="min. 8 characters and one caps letter"
+          type="password"
+          name="password"
+          id="form-password"
+          minlength="8"
+          pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          required
+        />
+        <label for="form-telephone">Numero di Telefono</label>
+        <input
+          title="max. 10 number"
+          type="text"
+          id="form-telephone"
+          maxlength="10"
+          pattern="[0-9]{9,10}"
+          autocomplete="off"
+          required
+        />
+      </fieldset>
+
+      <!-- SECOND SECTION -->
+      <fieldset class="section-two">
+        <legend align="center">Piano di abbonamento</legend>
+        <label for="form-plan">Scegli il tuo piano</label>
+        <select required>
+          <option value="" disabled selected>Select...</option>
+          <option value="free-plan">FREE Plan</option>
+          <optgroup label="Paid Plans">
+            <option value="base-plan">Base Plan - 11.99€/mese</option>
+            <option value="intermediate-plan">Intermediate Plan - 5.99€/mese</option>
+            <option value="super-plan">Pro Plan - 11.99€/mese</option>
+          </optgroup>
+        </select>
+        <div class="container-checkbox">
+          <label for="checkbox" class="label-pro">Prova il PRO Plan</label>
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="checkbox"
+            class="checkbox-pro"
+            checked
+          />
+        </div>
+        <h6><i>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolor maxime illum veniam provident dolore quo fugiat ea dicta error.</i></h6>
+      </fieldset>
+
+      <!-- THIRD SECTION -->
+      <fieldset>
+        <legend align="center">Metodo di Pagamento</legend>
+        <label for="form-card-number">Numero di Carta</label>
+        <input
+          title="Only numbers"
+          type="text"
+          id="form-card-number"
+          maxlength="16"
+          pattern="[0-9]{13,16}"
+          required
+        />
+        <div class="container-card">
+          <div class="container-card-date">
+            <label for="form-date">Scadenza</label>
+            <input
+              type="month"
+              id="form-date"
+              min="2022-03"
+              value="2022-04"
+              required
+            />
+          </div>
+          <div class="container-card-cvc">
+            <label for="form-cvc">CVC</label>
+            <input
+              title="Only numbers"
+              type="text"
+              id="form-cvc"
+              pattern="[0-9]{0,3}"
+              maxlength="3"
+              required
+            />
+          </div>
+        </div>
+        <label for="form-address">Indirizzo di Fatturazione</label>
+        <input
+          type="text"
+          name="address"
+          id="form-address"
+          pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"
+          autocomplete="off"
+          required
+        />
+      </fieldset>
+      <button type="submit" name="send">Registrati</button>
+    </form>
+  </body>
+</html>
